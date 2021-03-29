@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Row, Col, Input, Button } from 'antd';
+import { Flex, WhiteSpace } from 'antd-mobile';
 import styles from './Register.module.scss';
 import { $$, Axios } from '../../private/index';
 import { Link, Redirect, useHistory } from 'react-router-dom';
