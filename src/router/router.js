@@ -1,5 +1,4 @@
 import Login from '../pages/Login/Login';
-import Register from '../pages/Register/Register';
 import PayContent from '../pages/PayContent/PayContent';
 import PayContentBase from '../pages/PayContent/PayContentBase';
 import PayContentGigs from '../pages/PayContent/PayContentGigs';
@@ -25,13 +24,6 @@ let router = [
 		component: Login,
 		meta: {
 			title: '登录',
-		},
-	},
-	{
-		path: '/Register',
-		component: Register,
-		meta: {
-			title: '注册',
 		},
 	},
 	{
