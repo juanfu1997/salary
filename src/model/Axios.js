@@ -28,8 +28,7 @@ const codeMessage = {
 const API_BASE = {
 	development: '/wx',
 	trial: 'http://hr.hrgdmq.com/glorious/wx/',
-	production: 'http://hr.hrgdmq.com/glorious/wx/',
-	// production: 'http://gyh.shaohuahr.com/glorious/wx/',
+	production: 'http://gyh.shaohuahr.com/glorious/wx/',
 };
 const baseURL = API_BASE[process.env.NODE_ENV];
 console.log('process.env.BABEL_ENV', process.env, baseURL);

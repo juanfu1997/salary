@@ -14,7 +14,7 @@ let router = [
 	{
 		path: '/',
 		exact: true,
-		component: Login,
+		component: MonthlySalary,
 		meta: {
 			title: '工资查询',
 		},

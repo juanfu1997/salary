@@ -100,7 +100,7 @@ const TabbarNav = (props, ref) => {
 					onPress={() => {
 						setTabBarIndex('/ContractList');
 					}}
-					title="工资查询"
+					title="合同列表"
 					key="ContractList"
 				></TabBar.Item>
 			</TabBar>
