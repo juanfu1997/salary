@@ -1,202 +1,203 @@
-const _payOptions = [
+import PayContentBase from './PayContentBase';
+import PayContentGigs from './PayContentGigs';
+import PayContentWelfare from './PayContentWelfare';
+import PayContentPretax from './PayContentPretax';
+import PayContentAftertax from './PayContentAftertax';
+
+export const _baseCollect = [
 	{
 		name: '基本工资标准',
-		code: '',
-		value: '',
+		code: 'baseSalary',
+		arrow: false,
 	},
 	{
 		name: '岗位津贴',
-		code: '',
-		value: '',
+		code: 'postAllowance',
+		arrow: false,
 	},
 	{
 		name: '职级津贴',
-		code: '',
-		value: '',
+		code: 'positionAllowance',
+		arrow: false,
 	},
 	{
 		name: '绩效基数',
-		code: '',
-		value: '',
+		code: 'performanceBase',
+		arrow: false,
 	},
+];
+export const _gigsCollect = [
 	{
 		name: '出勤工资',
-		code: '',
-		value: '',
+		code: 'attendanceSalary',
+		arrow: false,
 	},
 	{
 		name: '病假工资',
-		code: '',
-		value: '',
+		code: 'sickSalary',
+		arrow: false,
 	},
 	{
 		name: '加班工资',
-		code: '',
-		value: '',
+		code: 'overtimeSalary',
+		arrow: false,
 	},
 	{
 		name: '绩效',
-		code: '',
-		value: '',
+		code: 'performance',
+		arrow: false,
 	},
 	{
 		name: '奖金',
-		code: '',
-		value: '',
+		code: 'performanceBonus',
+		arrow: false,
 	},
+];
+export const _welfareCollect = [
 	{
 		name: '餐补-常规',
-		code: '',
-		value: '',
+		code: 'mealSubsidy',
+		arrow: false,
 	},
 	{
 		name: '房补-常规',
-		code: '',
-		value: '',
+		code: 'housingSubsidy',
+		arrow: false,
 	},
 	{
 		name: '高温补贴',
-		code: '',
-		value: '',
+		code: 'temperatureSubsidy',
+		arrow: false,
 	},
 	{
 		name: '体检补贴',
-		code: '',
-		value: '',
+		code: 'physicalSubsidy',
+		arrow: false,
 	},
 	{
 		name: '培训津贴',
-		code: '',
-		value: '',
+		code: 'trainSubsidy',
+		arrow: false,
 	},
 	{
 		name: '其他补贴',
-		code: '',
-		value: '',
+		code: 'restsSubsidy',
+		arrow: false,
 	},
-	{
-		name: '年终奖',
-		code: '',
-		value: '',
-	},
-	{
-		name: '应发合计',
-		code: '',
-		value: '',
-	},
-
+];
+export const _pretaxCollect = [
 	{
 		name: '社保个人',
-		code: '',
-		value: '',
+		code: 'socialPerson',
+		arrow: false,
 	},
 	{
 		name: '公积金个人',
-		code: '',
-		value: '',
+		code: 'fundPerson',
+		arrow: false,
 	},
 	{
 		name: '代扣餐补',
-		code: '',
-		value: '',
+		code: 'withholdMeal',
+		arrow: false,
 	},
 	{
 		name: '其他扣款',
-		code: '',
-		value: '',
+		code: 'restsWithhold',
+		arrow: false,
 	},
+];
+export const _aftertaxCollect = [
 	{
 		name: '个税',
-		code: '',
-		value: '',
+		code: 'tax',
+		arrow: false,
 	},
 	{
-		name: '年终奖纳税',
-		code: '',
-		value: '',
+		name: '年终奖',
+		code: 'bonusTax',
+		arrow: false,
 	},
 	{
 		name: '税后扣款',
-		code: '',
-		value: '',
+		code: 'deduct',
+		arrow: false,
 	},
 	{
 		name: '税后补发',
-		code: '',
-		value: '',
+		code: 'reissue',
+		arrow: false,
+	},
+];
+export const salaryList = [
+	{
+		name: '姓名',
+		code: 'name',
+		arrow: false,
+	},
+	{
+		name: '手机号',
+		code: 'mobileNum',
+		arrow: false,
+	},
+	{
+		name: '月份',
+		code: 'monthPart',
+		arrow: false,
+	},
+	{
+		name: '基本工资汇总',
+		code: 'baseCollect',
+		arrow: true,
+		component: PayContentBase,
+		path: 'base',
+	},
+	{
+		name: '薪酬汇总',
+		code: 'gigsCollect',
+		arrow: true,
+		component: PayContentGigs,
+		path: 'gigs',
+	},
+	{
+		name: '福利汇总',
+		code: 'welfareCollect',
+		arrow: true,
+		component: PayContentWelfare,
+		path: 'welfare',
+	},
+	{
+		name: '税前扣除汇总',
+		code: 'pretaxCollect',
+		arrow: true,
+		component: PayContentPretax,
+		path: 'pretax',
+	},
+	{
+		name: '税后加减项汇总',
+		code: 'aftertaxCollect',
+		arrow: true,
+		component: PayContentAftertax,
+		path: 'aftertax',
+	},
+	{
+		name: '年终奖',
+		code: 'yearBonus',
+		arrow: false,
+	},
+	{
+		name: '应发合计',
+		code: 'totalOught',
+		arrow: false,
 	},
 	{
 		name: '实发工资',
-		code: '',
-		value: '',
+		code: 'payrollSalary',
+		arrow: false,
 	},
 	{
 		name: '实发年终奖',
-		code: '',
-		value: '',
+		code: 'payrollBonus',
+		arrow: false,
 	},
 ];
-const _attendance = [
-	{
-		name: '应出勤天数',
-		code: '',
-		value: '',
-	},
-	{
-		name: '实际出勤天数',
-		code: '',
-		value: '',
-	},
-
-	{
-		name: '事假(天)',
-		code: '',
-		value: '',
-	},
-	{
-		name: '病假(天)',
-		code: '',
-		value: '',
-	},
-	{
-		name: '产假天数',
-		code: '',
-		value: '',
-	},
-	{
-		name: '旷工(天)',
-		code: '',
-		value: '',
-	},
-	{
-		name: '早退(次)',
-		code: '',
-		value: '',
-	},
-	{
-		name: '迟到(次)',
-		code: '',
-		value: '',
-	},
-	{
-		name: '补卡(次)',
-		code: '',
-		value: '',
-	},
-	{
-		name: '平时加班时数汇总',
-		code: '',
-		value: '',
-	},
-	{
-		name: '周末/非春节法定加班时数汇总',
-		code: '',
-		value: '',
-	},
-	{
-		name: '春节法定节假日加班时数汇总',
-		code: '',
-		value: '',
-	},
-];
-export default { _payOptions, _attendance };
